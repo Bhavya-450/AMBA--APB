@@ -1,0 +1,129 @@
+`timescale 1ns/1ps
+
+module APB_top_module_tb;
+
+    
+    reg         clk;
+    reg         reset;
+
+    reg         transfer;
+    reg         write;
+    reg  [31:0] addr;
+    reg  [31:0] wdata;
+
+    wire [31:0] rdata;
+    wire        error;
+
+    
+    APB_top_module dut (
+        .clk      (clk),
+        .reset    (reset),
+        .transfer (transfer),
+        .write    (write),
+        .addr     (addr),
+        .wdata    (wdata),
+        .rdata    (rdata),
+        .error    (error)
+    );
+
+   
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+
+    initial begin
+        $dumpfile("apb_top.vcd");
+        $dumpvars(0, APB_top_module_tb);
+    end
+
+  
+    task issue_write(input [31:0] a, input [31:0] d);
+        begin
+            @(posedge clk);
+            addr     = a;
+            wdata    = d;
+            write    = 1;
+            transfer = 1;
+
+            // Hold transfer for enough cycles so the
+            // master + slave complete the transaction
+            repeat (10) @(posedge clk);
+
+            transfer = 0;
+            write    = 0;
+            @(posedge clk);
+        end
+    endtask
+
+    task issue_read(input [31:0] a);
+        begin
+            @(posedge clk);
+            addr     = a;
+            write    = 0;
+            transfer = 1;
+
+            repeat (10) @(posedge clk);
+
+            transfer = 0;
+            @(posedge clk);
+        end
+    endtask
+
+    
+    initial begin
+       
+        reset    = 0;
+        transfer = 0;
+        write    = 0;
+        addr     = 0;
+        wdata    = 0;
+
+       
+        #20;
+        reset = 1;
+        #20;
+
+        // ---- TEST 1: Write 0xDEADBEEF to addr 0x00 ----
+        $display("[%0t] TEST 1: WRITE DEADBEEF -> addr 0x00", $time);
+        issue_write(32'h00, 32'hDEADBEEF);
+        #20;
+
+        // ---- TEST 2: Read back from addr 0x00 ----
+        $display("[%0t] TEST 2: READ  addr 0x00", $time);
+        issue_read(32'h00);
+        #20;
+        if (rdata === 32'hDEADBEEF)
+            $display("   PASS: rdata = %h", rdata);
+        else
+            $display("   FAIL: rdata = %h (expected DEADBEEF)", rdata);
+
+        // ---- TEST 3: Write to a different register ----
+        $display("[%0t] TEST 3: WRITE 12345678 -> addr 0x10", $time);
+        issue_write(32'h10, 32'h12345678);
+        #20;
+
+        // ---- TEST 4: Read it back ----
+        $display("[%0t] TEST 4: READ  addr 0x10", $time);
+        issue_read(32'h10);
+        #20;
+        if (rdata === 32'h12345678)
+            $display("   PASS: rdata = %h", rdata);
+        else
+            $display("   FAIL: rdata = %h (expected 12345678)", rdata);
+
+        // ---- TEST 5: Invalid address ----
+        $display("[%0t] TEST 5: READ  invalid addr 0x28", $time);
+        issue_read(32'h28);
+        #20;
+        if (error === 1)
+            $display("   PASS: error flag asserted");
+        else
+            $display("   FAIL: error = %b (expected 1)", error);
+
+    
+        #40;
+        $display("[%0t] DONE", $time);
+        $finish;
+    end
+
+endmodule
