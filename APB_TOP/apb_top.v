@@ -57,3 +57,4 @@ module APB_top_module(
         .PREADY(pready),
         .PSLVERR(pslaverr)
     );
+endmodule
