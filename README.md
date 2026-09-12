@@ -37,7 +37,7 @@ Requester and Completer
 
 ## APB -BLOCK DIAGRAM ***:
    
-![APB Block Diagram](img2.jpg)
+![APB Block Diagram](docs/img2.jpg)
 
 ## APB - SLGS :
 **PCLK Clock:**  The rising edge of PCLK times all transfers on the APB.
