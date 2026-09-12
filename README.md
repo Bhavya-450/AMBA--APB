@@ -96,6 +96,17 @@ Exit from the ACCESS state is controlled by the PREADY signal from the Completer
 
 Alternatively, the bus moves directly to the SETUP state if another transfer follows.   
 
+## WRITE TRANSFERS:
+
+This section describes the following types of write transfer:
+• With no wait states
+• With wait states
+All signals shown in this section are sampled at the rising edge of PCLK.
+
+## With no wait states:
+
+
+
 
 
 
