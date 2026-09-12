@@ -40,7 +40,7 @@ Requester and Completer
 ![APB Block Diagram](img2.jpg)
 
 ## APB - SLGS :
-**PCLK Clock:**  The rising edge of PCLK times all transfers on the APB.
+-**PCLK Clock:**  The rising edge of PCLK times all transfers on the APB.
 
 **PRESET:** System bus equivalent Reset. The APB reset signal is active LOW.
 
