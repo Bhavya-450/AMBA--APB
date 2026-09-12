@@ -158,6 +158,46 @@ All signals shown in this section are sampled at the rising edge of PCLK
 The timing of the address, PADDR, write, PWRITE, select, PSEL, and enable, PENABLE, signals are the same  as described in Write transfers on .
 The Completer must provide the data before the end of the read  transfer.
 
+## With wait states(READ): 
+The  Picture shows that how the PREADY extends the transfer.
+
+![With  wait states](docs/img7.png) 
+
+The transfer is extended if PREADY is driven LOW during an Access phase. The following signals remain 
+
+unchanged while PREADY remains LOW:
+
+• Address signal, PADDR
+
+• Direction signal, PWRITE
+
+• Select signal, PSEL
+
+• Enable signal, PENABLE
+
+• Protection signal, PPROT
+
+• User signal, PAUSER
+
+## Error detection behavior:
+This specification is not prescriptive regarding component or system behavior when a parity error is detected. 
+
+Depending on the system and affected signals, a flipped bit can have a wide range of effects. It might be harmless, 
+cause performance issues, cause data corruption, cause security violations, or deadlock.
+
+When an error is detected, the Completer can:
+
+• Terminate or propagate the transfer.
+
+• Correct the parity check signal or propagate the error.
+
+• Update its memory or leave untouched.
+
+• Signal an error response through other means, for example with an interrupt
+
+
+
+
 
 
 
