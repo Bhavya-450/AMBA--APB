@@ -122,6 +122,8 @@ same peripheral.
 
 ## Wait wait states:
 
+![With no wait states](docs/img5.png)
+
 
 
 
