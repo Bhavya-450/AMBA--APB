@@ -1,5 +1,6 @@
 # AMBA--APB  
 Introduction of AMBA :
+
 AMBA is an open specification that specifies a strategy on the management of the functional blocks that sort system on chip (SoC) architecture.
 The AMBA specification standard is used for designing high-level embedded microcontrollers.
 AMBA’s major objective is to provide technology independence and to encourage modular system design. Furthermore, it strongly encourages the development of reusable peripheral devices while minimizing silicon infrastructure. 
