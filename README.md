@@ -35,6 +35,8 @@ TYPES OF AMBA bus :
 6. Advanced trace bus (ATB).
 
 APB - BLOCK DIAGRAM : 
+img2.jpg 
+
 
 
 
