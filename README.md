@@ -108,7 +108,7 @@ All signals shown in this section are sampled at the rising edge of PCLK.
 
 ## With no wait states:
 
-![With no wait states](./img4.png)
+![With no wait states](docs./img4.png)
 
 - The Setup phase of the write transfer occurs at T1 .The select signal, PSEL, is asserted, which means
 that PADDR, PWRITE, and PWDATA must be valid.
