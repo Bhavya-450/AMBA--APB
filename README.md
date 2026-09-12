@@ -40,7 +40,7 @@ Requester and Completer
 ![APB Block Diagram](img2.jpg)
 
 ## APB - SLGS :
-** PCLK Clock:** The rising edge of PCLK times all transfers on the APB.
+#PCLK Clock:##  The rising edge of PCLK times all transfers on the APB.
 PRESET: System bus equivalent Reset. The APB reset signal is active LOW.
 PADDR: 32 bit address bus PSEL The slave device is selected and that a data transfer is required.
 PENABLE Enable: This signal indicates the second and subsequent cycles of an APB transfer.
