@@ -179,6 +179,20 @@ unchanged while PREADY remains LOW:
 
 • User signal, PAUSER
 
+## Parity Check:
+The following attributes are common to the check signals added for byte parity interface protection:
+
+• Odd parity is used. Odd parity means that there is always an odd number of bits asserted across the interface 
+signal and check signal. Check signals are associated with each interface signal.
+
+• Each parity check bit covers no more than 8 bits of payload. This limitation assumes that there is a maximum 
+of three logic levels available in the timing allowance for generating each parity bit.
+
+• Parity signals that cover critical control signals are defined with a single parity bit. The single odd parity bit 
+is the inversion of the original critical control signal. Critical control signals are likely to have a smaller 
+timing allowance available.
+
+
 ## Error detection behavior:
 This specification is not prescriptive regarding component or system behavior when a parity error is detected. 
 
