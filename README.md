@@ -76,23 +76,23 @@ change in the transition between SETUP and ACCESS and between cycles in the ACCE
                   
 - **PADDR**
 
--**PPROT**
+- **PPROT**
 
--**PWRITE**
+- **PWRITE**
 
--**PWDATA**, only for write transactions
+- **PWDATA**, only for write transactions
 
--**PSTRB**
+- **PSTRB**
 
--**PAUSER**
+- **PAUSER**
 
--**PWUSER**
+- **PWUSER**
 
 Exit from the ACCESS state is controlled by the PREADY signal from the Completer:
 
--**If PREADY**  is held LOW by the Completer, then the interface remains in the ACCESS state.
+- **If PREADY**  is held LOW by the Completer, then the interface remains in the ACCESS state.
 
--**If PREADY** is driven HIGH by the Completer, then the ACCESS state is exited and the bus returns to the IDLE state if no more transfers are required. 
+- **If PREADY** is driven HIGH by the Completer, then the ACCESS state is exited and the bus returns to the IDLE state if no more transfers are required. 
 
 Alternatively, the bus moves directly to the SETUP state if another transfer follows.   
 
@@ -108,14 +108,14 @@ All signals shown in this section are sampled at the rising edge of PCLK.
 
 ![With no wait states](./img4.png)
 
--The Setup phase of the write transfer occurs at T1 .The select signal, PSEL, is asserted, which means
+- The Setup phase of the write transfer occurs at T1 .The select signal, PSEL, is asserted, which means
 that PADDR, PWRITE, and PWDATA must be valid.
 
--The Access phase of the write transfer is shown at T2 in Figure 3-1 where PENABLE is asserted. PREADY is
+- The Access phase of the write transfer is shown at T2 in Figure 3-1 where PENABLE is asserted. PREADY is
 asserted by the Completer at the rising edge of PCLK to indicate that the write data will be accepted at T3. PADDR,
 PWDATA, and any other control signals, must be stable until the transfer completes.
 
--At the end of the transfer, PENABLE is deasserted. PSEL is also deasserted, unless there is another transfer to the
+- At the end of the transfer, PENABLE is deasserted. PSEL is also deasserted, unless there is another transfer to the
 same peripheral.
 
 
