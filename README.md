@@ -118,6 +118,10 @@ PWDATA, and any other control signals, must be stable until the transfer complet
 - At the end of the transfer, PENABLE is deasserted. PSEL is also deasserted, unless there is another transfer to the
 same peripheral.
 
+##Wait wait states:
+
+
+
 
 
 
