@@ -1,5 +1,5 @@
 # AMBA--APB  
-Introduction of AMBA :
+***Introduction of AMBA ***:
 
 AMBA is an open specification that specifies a strategy on the management of the functional blocks that sort system on chip (SoC) architecture.
 The AMBA specification standard is used for designing high-level embedded microcontrollers.
@@ -27,7 +27,7 @@ APB transfers are initiated by an APB bridge. APB bridges can also be referred t
 interface responds to requests. APB peripherals can also be referred to as a Completer. This specification will use
 Requester and Completer
 
-TYPES OF AMBA bus :
+***TYPES OF AMBA bus*** :
 1. Five interfaces are defined within the AMBA specification: 
 2. Advanced system bus (ASB)
 3. Advanced peripheral bus (APB)
@@ -35,7 +35,7 @@ TYPES OF AMBA bus :
 5. Advanced extensible interface (AXI)
 6. Advanced trace bus (ATB).
 
-APB -BLOCK DIAGRAM:
+*** APB -BLOCK DIAGRAM ***:
    
 ![APB Block Diagram](img2.jpg)
 
