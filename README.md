@@ -89,8 +89,11 @@ change in the transition between SETUP and ACCESS and between cycles in the ACCE
 -**PWUSER**
 
 Exit from the ACCESS state is controlled by the PREADY signal from the Completer:
+
 -**If PREADY**  is held LOW by the Completer, then the interface remains in the ACCESS state.
+
 -**If PREADY** is driven HIGH by the Completer, then the ACCESS state is exited and the bus returns to the IDLE state if no more transfers are required. 
+
 Alternatively, the bus moves directly to the SETUP state if another transfer follows.   
 
 
