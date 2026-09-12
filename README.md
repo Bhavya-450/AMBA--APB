@@ -60,6 +60,9 @@ Requester and Completer
 
 ## Operating states of APB ##:
 
+(img3.jpg)
+
+
 
 
 
