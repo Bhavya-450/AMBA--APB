@@ -122,6 +122,19 @@ same peripheral.
 
 ## Wait wait states:
 
+During an Access phase, when PENABLE is HIGH, the Completer extends the transfer by driving PREADY LOW.
+The following signals remain unchanged while PREADY remains LOW: 
+
+Address signal, PADDR
+• Direction signal, ## PWRITE
+• Select signal, PSELx
+• Enable signal, PENABLE
+• Write data signal, PWDATA
+• Write strobe signal, PSTRB
+• Protection type signal, PPROT
+• User request attribute, PAUSER
+• User write data attribute, PWUSER
+
 ![With no wait states](docs/img5.png)
 
 
