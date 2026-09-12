@@ -209,6 +209,14 @@ When an error is detected, the Completer can:
 
 • Signal an error response through other means, for example with an interrupt
 
+## CONCLUSION :
+
+-This paper gives an outline of the AMBA bus architecture and explain the APB bus in detail. 
+The APB bus is designed using the Verilog HDL according to the specification and is verified using QUESTA Sim.
+
+-The simulation results show that the data read from a particular memory location is same as the data written to the given memory location.
+The results obtained after the simulation will be compared with the results.
+
 
 
 
