@@ -58,6 +58,10 @@ Requester and Completer
 
 **PSLAVERR:** Slave error: This signal indicates a transfer failure.
 
+## Operating states of APB ##:
+
+
+
 
 
 
