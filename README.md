@@ -136,7 +136,12 @@ Address signal, PADDR
 - User request attribute, PAUSER
 - User write data attribute, PWUSER
 
+PREADY can take any value when PENABLE is LOW. This ensures that peripherals that have a fixed two cycle
+access can tie PREADY HIGH.
+
 ![With no wait states](docs/img5.png)
+
+
 
 
 
