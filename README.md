@@ -60,7 +60,7 @@ Requester and Completer
 
 ## Operating states of APB ##:
 
-(img3.jpg)
+![APB Operating States](img3.jpg)
 
 
 
