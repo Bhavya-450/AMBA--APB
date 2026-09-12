@@ -99,9 +99,11 @@ Alternatively, the bus moves directly to the SETUP state if another transfer fol
 ## WRITE TRANSFERS:
 
 This section describes the following types of write transfer:
+
 • With no wait states
 
 • With wait states
+
 All signals shown in this section are sampled at the rising edge of PCLK.
 
 ## With no wait states:
