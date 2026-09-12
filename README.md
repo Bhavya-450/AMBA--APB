@@ -40,7 +40,7 @@ Requester and Completer
 ![APB Block Diagram](img2.jpg)
 
 ## APB - SLGS :
--**PCLK Clock:**  The rising edge of PCLK times all transfers on the APB.
+**PCLK Clock:**  The rising edge of PCLK times all transfers on the APB.
 
 **PRESET:** System bus equivalent Reset. The APB reset signal is active LOW.
 
@@ -74,7 +74,7 @@ always moves to the ACCESS state on the next rising edge of the clock.
 **ACCESS:** The enable signal, PENABLE, is asserted in the ACCESS state. The following signals must not
 change in the transition between SETUP and ACCESS and between cycles in the ACCESS state:
                   
--**PADDR**
+- **PADDR**
 
 -**PPROT**
 
