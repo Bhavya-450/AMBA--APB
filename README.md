@@ -66,6 +66,7 @@ Requester and Completer
 The state machine operates through the following states: 
 
 **IDLE:** This is the default state of the APB interface.
+
 **SETUP:** When a transfer is required, the interface moves into the SETUP state, where the appropriate select
 signal, PSELx, is asserted. The interface only remains in the SETUP state for one clock cycle and
 always moves to the ACCESS state on the next rising edge of the clock.
@@ -74,11 +75,17 @@ always moves to the ACCESS state on the next rising edge of the clock.
 change in the transition between SETUP and ACCESS and between cycles in the ACCESS state:
                   
 -**PADDR**
+
 -**PPROT**
+
 -**PWRITE**
+
 -**PWDATA**, only for write transactions
+
 -**PSTRB**
+
 -**PAUSER**
+
 -**PWUSER**
 
 Exit from the ACCESS state is controlled by the PREADY signal from the Completer:
