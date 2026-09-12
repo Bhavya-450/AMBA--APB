@@ -61,8 +61,8 @@ Requester and Completer
 
 ## Operating States of APB
 
-![APB Operating States](./img3.png)
-
+![APB Operating States](docs/img3.png)
+ 
 The state machine operates through the following states: 
 
 **IDLE:** This is the default state of the APB interface.
@@ -118,7 +118,7 @@ PWDATA, and any other control signals, must be stable until the transfer complet
 - At the end of the transfer, PENABLE is deasserted. PSEL is also deasserted, unless there is another transfer to the
 same peripheral.
 
-##Wait wait states:
+## Wait wait states:
 
 
 
