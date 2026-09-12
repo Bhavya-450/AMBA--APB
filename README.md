@@ -24,12 +24,12 @@ interface responds to requests. APB peripherals can also be referred to as a Com
 Requester and Completer
 
 TYPES OF AMBA bus :
-Five interfaces are defined within the AMBA specification: 
-Advanced system bus (ASB)
-Advanced peripheral bus (APB)
-Advanced high-performance bus (AHB)
-Advanced extensible interface (AXI)
-Advanced trace bus (ATB).
+1. Five interfaces are defined within the AMBA specification: 
+2. Advanced system bus (ASB)
+3. Advanced peripheral bus (APB)
+4. Advanced high-performance bus (AHB)
+5. Advanced extensible interface (AXI)
+6. Advanced trace bus (ATB).
 
 APB - BLOCK DIAGRAM : 
 
