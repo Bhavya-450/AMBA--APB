@@ -122,6 +122,8 @@ same peripheral.
 
 ## Wait wait states:
 
+![With wait states](docs/img5.png)
+
 During an Access phase, when PENABLE is HIGH, the Completer extends the transfer by driving PREADY LOW.
 The following signals remain unchanged while PREADY remains LOW: 
 
@@ -139,7 +141,24 @@ Address signal, PADDR
 PREADY can take any value when PENABLE is LOW. This ensures that peripherals that have a fixed two cycle
 access can tie PREADY HIGH.
 
-![With no wait states](docs/img5.png)
+
+## READ TRANSFERS :
+Two types of read transfer are described in this section:
+
+• With no wait states
+
+• With wait states
+
+All signals shown in this section are sampled at the rising edge of PCLK
+
+## With no wait states(READ):
+
+![With no wait states](docs/img6.png) 
+
+The timing of the address, PADDR, write, PWRITE, select, PSEL, and enable, PENABLE, signals are the same  as described in Write transfers on .
+The Completer must provide the data before the end of the read  transfer.
+
+
 
 
 
