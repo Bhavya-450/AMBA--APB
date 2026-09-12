@@ -34,6 +34,8 @@ TYPES OF AMBA bus :
 4. Advanced high-performance bus (AHB)
 5. Advanced extensible interface (AXI)
 6. Advanced trace bus (ATB).
+
+APB -BLOCK DIAGRAM:
    
 ![APB Block Diagram](img2.jpg)
 
